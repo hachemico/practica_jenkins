@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('linter') {
             steps {
-                sh "npm install eslint && npm run lint"
+                sh "npm run lint"
             }
         }
         // stage('Parallel Stage') {
