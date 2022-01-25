@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+     triggers { 
+        pollSCM('0 */3 * * *') 
+    }
+    parameters {
+        string(name: 'ejecutor', defaultValue: 'Hachemico', description: 'Nombre persona que realiza la accion.')
+        string(name: 'motivo', defaultValue: 'Actualizar', description: 'Razon por la que se realiza la acción.')
+        string(name: 'correo_notificacion', defaultValue: 'hachemico@gmail.com', description: 'Correo al que se envia la notificación.')
+    }
+   
+    stages {
+        stage('linter') {
+            steps {
+                sh "npm lint"
+            }
+        }
+        // stage('Parallel Stage') {
+        //     parallel{
+        //         stage('paralel1') {
+        //             steps {
+        //                 echo "Tarea Paralelo 1"
+        //             }
+        //         }
+        //         stage('paralel2') {
+        //             steps {
+        //                 echo "Tarea Paralelo 2"
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}
