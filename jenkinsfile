@@ -3,6 +3,10 @@ pipeline {
      triggers { 
         pollSCM('0 */3 * * *') 
     }
+     environment {
+        RES1 = ' '
+        RES2 = ' '
+    }
     parameters {
         string(name: 'ejecutor', defaultValue: 'Hachemico', description: 'Nombre persona que realiza la accion.')
         string(name: 'motivo', defaultValue: 'Actualizar', description: 'Razon por la que se realiza la acción.')
@@ -14,6 +18,14 @@ pipeline {
             steps {
                 sh " npm install "
                 sh " npm run lint "
+            }
+        }
+        stage('test') {
+            steps {
+                 script{
+                    sh " npm install "
+                    RES1 = sh( script: "./node_modules/.bin/cypress run ", returnStdout: true).trim()
+                }
             }
         }
         // stage('Parallel Stage') {
