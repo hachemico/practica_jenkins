@@ -14,16 +14,24 @@ pipeline {
     }
    
     stages {
+        stage('install') {
+            steps {
+                sh " npm install -y"
+                sh " npm build"
+                sh " npm start &"
+            }
+        }
+
+
         stage('linter') {
             steps {
-                sh " npm install "
                 sh " npm run lint "
             }
         }
         stage('test') {
             steps {
                  script{
-                    sh " npm install cypress"
+                    // sh " npm install cypress"
                     RES1 = sh( script: "./node_modules/.bin/cypress run ", returnStdout: true).trim()
                 }
             }
