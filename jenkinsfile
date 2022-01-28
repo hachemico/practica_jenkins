@@ -14,17 +14,17 @@ pipeline {
     }
    
     stages {
-        stage('install') {
-            steps {
-                sh " npm install --save-dev cypress -y"
-                sh " npm run build "
-                sh " npm run start &"
+        // stage('install') {
+        //     steps {
+        //         sh " npm install --save-dev cypress -y"
+        //         sh " npm run build "
+        //         sh " npm run start &"
                 
-                sh " apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev -y"
-                sh " apt-get install libasound2 -y" 
-                sh "npm update caniuse-lite browserslist"
-            }
-        }
+        //         sh " apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev -y"
+        //         sh " apt-get install libasound2 -y" 
+        //         sh "npm update caniuse-lite browserslist"
+        //     }
+        // }
 
 
         stage('linter') {
@@ -36,7 +36,13 @@ pipeline {
             steps {
                  script{
                     // sh " npm install cypress"
-                     sh " npm install -y"
+                  sh " npm install --save-dev cypress -y"
+                    sh " npm run build "
+                    sh " npm run start &"
+                
+                    sh " apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev -y"
+                    sh " apt-get install libasound2 -y" 
+                    sh "npm update caniuse-lite browserslist"
                     RES1 = sh( script: "./node_modules/.bin/cypress run ", returnStdout: true).trim()
                 }
             }
