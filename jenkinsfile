@@ -39,6 +39,14 @@ pipeline {
                 }
             }
         }
+        stage('show') {
+            steps {
+                 script{
+                   echo "$RES1"
+                  
+                }
+            }
+        }
         // stage('Parallel Stage') {
         //     parallel{
         //         stage('paralel1') {
