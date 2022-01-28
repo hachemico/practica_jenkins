@@ -17,8 +17,9 @@ pipeline {
         stage('install') {
             steps {
                 sh " npm install -y"
+                sh " npm start &"
                 sh " npm run build "
-                sh " npm run start &"
+                
                 sh " apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev -y"
                 sh " apt-get install libasound2 -y" 
                 sh "npm update caniuse-lite browserslist"
