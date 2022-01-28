@@ -17,7 +17,6 @@ pipeline {
         stage('install') {
             steps {
                 sh " npm install -y"
-                sh "cypress install"
                 sh " npm run build "
                 sh " npm run start &"
                 
