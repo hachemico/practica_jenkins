@@ -17,7 +17,7 @@ pipeline {
         stage('install') {
             steps {
                 sh " npm install -y"
-                sh " npm build"
+                sh " npm build ."
                 sh " npm start &"
             }
         }
