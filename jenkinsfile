@@ -36,7 +36,7 @@ pipeline {
             steps {
                  script{
                     // sh " npm install cypress"
-                  sh " npm install ci -y"
+                  sh " npm ci -y"
                     sh " npm run build "
                     sh " npm run start &"
                 
