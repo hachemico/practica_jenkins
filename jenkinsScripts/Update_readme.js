@@ -1,10 +1,10 @@
-const fs = require('fs')
+const fs = require('fs');
 
 
-const testResult = process.argv[2]
+const testResult = process.argv[2];
 console.log(testResult);
-const successBadge = 'https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg'
-const failedBadge = 'https://img.shields.io/badge/test-failure-red.svg'
+const successBadge = 'https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg';
+const failedBadge = 'https://img.shields.io/badge/test-failure-red.svg';
 
 fs.readFile('README.md', 'utf-8', (err,data) => {
     if (err) {
@@ -18,7 +18,7 @@ fs.readFile('README.md', 'utf-8', (err,data) => {
         if (err) {
             throw err
         }
-        console.log('Update Succes,okey')
+        console.log('Update Succes,okey');
         console.log(markdownUpdate);
     })
 })
