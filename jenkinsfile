@@ -4,7 +4,7 @@ pipeline {
         pollSCM('0 */3 * * *') 
     }
      environment {
-        RES1 = ' '
+        // RES1 = ' '
         RES2 = ' '
     }
     parameters {
@@ -47,9 +47,9 @@ pipeline {
             steps {
                  script{
                    echo "${env.RES1}"
-                   echo "RES1"
-                   echo "$RES1"
-                   echo "{RES1}"
+                   echo "env.RES1"
+                   echo "$env.RES1"
+                   echo "{env.RES1}"
                 }
             }
         }
