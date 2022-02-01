@@ -38,13 +38,13 @@ pipeline {
                 }
             }
         }
-        stage('show') {
-            steps {
-                 script{
-                //    echo "${env.RES1}"
-                }
-            }
-        }
+        // stage('show') {
+        //     steps {
+        //          script{
+        //         //    echo "${env.RES1}"
+        //         }
+        //     }
+        // }
         // stage('Parallel Stage') {
         //     parallel{
         //         stage('paralel1') {
