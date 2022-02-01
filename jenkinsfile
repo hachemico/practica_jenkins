@@ -38,7 +38,7 @@ pipeline {
                     sh "npm install cypress -g"
                     sh " npm ci -y"
                     sh " npm run dev &"
-                    env.RES1 = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStdout: true)
+                    env.RES1 = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStatus: true)
                     // RES1 = sh 'echo \$?'
                 }
             }
