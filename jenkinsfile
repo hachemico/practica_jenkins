@@ -45,12 +45,12 @@ pipeline {
         }
         stage('show') {
             steps {
-                 script{
+                //  script{
                    echo "${RES1}"
                    echo "RES1"
                    echo "$RES1"
                    echo "{RES1}"
-                }
+                // }
             }
         }
         // stage('Parallel Stage') {
