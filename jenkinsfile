@@ -39,7 +39,7 @@ pipeline {
                     sh " npm ci -y"
                     sh " npm run dev &"
                     sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStdout: true).trim() 
-                    RES1 = sh "echo \$?"
+                    RES1 = sh 'echo \$?'
                 }
             }
         }
@@ -49,7 +49,6 @@ pipeline {
                    echo "${RES1}"
                    echo "RES1"
                    echo "$RES1"
-                    echo $RES1
                    echo "{RES1}"
                 }
             }
