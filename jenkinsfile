@@ -25,7 +25,7 @@ pipeline {
                     sh "npm install cypress -g"
                     sh " npm ci -y"
                     sh " npm run dev &"
-                    env.RES1 = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStatus: true)
+                    RES1 = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStatus: true)
                     // RES1 = sh 'echo \$?'
                 }
             }
@@ -34,14 +34,14 @@ pipeline {
             steps {
                  script{
                     sh ("chmod 777 -R ./jenkinsScripts/Update_readme.js" )
-                    env.RES2 = sh ( script: "node jenkinsScripts/Update_readme.js" ${RES1}, returnStatus: true)
+                    env.RES2 = sh ( script: "node jenkinsScripts/Update_readme.js $RES1", returnStatus: true)
                 }
             }
         }
         stage('show') {
             steps {
                  script{
-                   echo "${env.RES1}"
+                //    echo "${env.RES1}"
                 }
             }
         }
