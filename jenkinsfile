@@ -39,17 +39,17 @@ pipeline {
                     sh " npm ci -y"
                     sh " npm run dev &"
                     sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStdout: true).trim() 
-                    RES1 = sh 'echo \$?'
+                    env.RES1 = sh 'echo \$?'
                 }
             }
         }
         stage('show') {
             steps {
                 //  script{
-                   echo "${RES1}"
-                   echo "RES1"
-                   echo "$RES1"
-                   echo "{RES1}"
+                   echo "${env.RES1}"
+                   echo "env.RES1"
+                   echo "$env.RES1"
+                   echo ${env.RES1}
                 // }
             }
         }
