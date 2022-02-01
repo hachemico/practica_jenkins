@@ -47,7 +47,8 @@ pipeline {
             steps {
                  script{
                    echo "${env.RES1}"
-                  
+                   echo "$env.RES1"
+                   echo "{env.RES1}"
                 }
             }
         }
