@@ -35,18 +35,11 @@ pipeline {
         stage('test') {
             steps {
                  script{
-                    // sh " npm install cypress"
                     sh "npm install cypress -g"
                     sh " npm ci -y"
                     sh " npm run dev &"
-                    // sh " npm run start &"
-                
-                    // sh " apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev xvfb -y"
-                    // sh " apt-get install libasound2 -y" 
-                    // sh "npm update caniuse-lite browserslist"
-                    
-                    // sh "apt install xvfb"
-                    RES1 = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStdout: true).trim()
+                    sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStdout: true).trim() 
+                    RES1 = sh "echo \$?"
                 }
             }
         }
