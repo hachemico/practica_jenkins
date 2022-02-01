@@ -16,9 +16,10 @@ fs.readFile('README.md', 'utf-8', (err,data) => {
     )
     fs.writeFile('README.md', markdownUpdate, 'utf-8', (err) => {
         if (err) {
-            throw err
+            console.error(err)
+            return
         }
-        console.log('Update Succes,okey');
-        console.log(markdownUpdate);
+        // console.log('Update Succes,okey');
+        // console.log(markdownUpdate);
     })
 })
