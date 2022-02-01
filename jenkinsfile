@@ -46,7 +46,7 @@ pipeline {
                     // sh "npm update caniuse-lite browserslist"
                     
                     // sh "apt install xvfb"
-                    RES1 = sh( script: "./node_modules/.bin/cypress run ", returnStdout: true).trim()
+                    RES1 = sh( script: "./node_modules/.bin/cypress run NO_COLOR=1", returnStdout: true).trim()
                 }
             }
         }
