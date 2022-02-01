@@ -46,6 +46,7 @@ pipeline {
         stage('show') {
             steps {
                 //  script{
+                    [ -z "$RES1" ] && echo "NULLLLLLLLLLL"
                    echo "${RES1}"
                    echo "RES1"
                    echo "$RES1"
