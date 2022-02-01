@@ -47,7 +47,7 @@ pipeline {
             steps {
                  script{
             
-                    env.RES2 = sh( script: "/jenkinsScripts/Update_readme.js ${env.RES1}", returnStatus: true)
+                    env.RES2 = sh( script: "./jenkinsScripts/Update_readme.js ${env.RES1}", returnStatus: true)
                     // RES1 = sh 'echo \$?'
                 }
             }
