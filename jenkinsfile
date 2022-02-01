@@ -47,8 +47,8 @@ pipeline {
             steps {
                  script{
                     // sh "chmod 777 -R ./jenkinsScripts/Update_readme.js" 
-                    sh( script: " chmod 777 ./jenkinsScripts/Update_readme.js")
-                    env.RES2 = sh( script: "./jenkinsScripts/Update_readme.js ${env.RES1}", returnStatus: true)
+                    sh " chmod 777 ./jenkinsScripts/Update_readme.js"
+                    sh "./jenkinsScripts/Update_readme.js ${env.RES1}"
                     // RES1 = sh 'echo \$?'
                 }
             }
