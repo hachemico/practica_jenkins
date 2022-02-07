@@ -8,7 +8,7 @@ const failedBadge = 'https://img.shields.io/badge/test-failure-red.svg';
 
 fs.readFile('README.md', 'utf-8', (err,data) => {
     if (err) {
-        throw err
+        return console.error(err)
     }
     const markdownUpdate = data.replace(
         /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm,
@@ -16,10 +16,10 @@ fs.readFile('README.md', 'utf-8', (err,data) => {
     )
     fs.writeFile('README.md', markdownUpdate, 'utf-8', (err) => {
         if (err) {
-            console.error(err)
-            return
+            
+            return console.error(err)
         }
         // console.log('Update Succes,okey');
-        console.log(markdownUpdate);
+        // console.log(markdownUpdate);
     })
 })
