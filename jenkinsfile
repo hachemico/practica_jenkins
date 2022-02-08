@@ -41,12 +41,14 @@ pipeline {
         }
         stage('push_changes') {
             steps {
-                 script{
+                 
                     sh ("chmod 777 -R ./jenkinsScripts/Push_changes.js" )
-                    WithCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')])
+                    WithCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')]){
+                    script{
                     env.RES3 = sh ( script: "node jenkinsScripts/Push_changes.js $params.ejecutor $params.motivo ${TOKEN}", returnStatus: true)
                     // sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
                     
+                    }
                 }
             }
         }
