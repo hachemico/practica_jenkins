@@ -7,9 +7,9 @@
 console.log(PARAM_EJECUTOR);
 console.log(PARAM_MOTIVO);
 console.log(TOKEN)
-// git config --global user.email \'hachemico@gmail.com\'
-// git config --global user.name \'hachemico\'
-// git set-url origin https://github.com/hachemico/practica_jenkins.git
-// git add .
-// git commit -m "Pipeline ejecutada por $PARAM_EJECUTOR . MOTIVO: $PARAM_MOTIVO "
-// git push origin main
+git config --global user.email \'hachemico@gmail.com\'
+git config --global user.name \'hachemico\'
+git set-url origin https://$TOKEN@github.com/hachemico/practica_jenkins.git
+git add .
+git commit -m "Pipeline ejecutada por $PARAM_EJECUTOR . MOTIVO: $PARAM_MOTIVO "
+git push origin main
