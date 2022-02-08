@@ -1,12 +1,12 @@
 
- PARAM_EJECUTOR = process.argv[2];
- PARAM_MOTIVO = process.argv[3];
- TOKEN = process.argv[4];
+ PARAM_EJECUTOR = process.argv[2]
+ PARAM_MOTIVO = process.argv[3]
+ TOKEN = process.argv[4]
 
-
-console.log(PARAM_EJECUTOR);
-console.log(PARAM_MOTIVO);
+console.log(PARAM_EJECUTOR)
+console.log(PARAM_MOTIVO)
 console.log(TOKEN)
+
 git config --global user.email \'hachemico@gmail.com\'
 git config --global user.name \'hachemico\'
 git set-url origin https://$TOKEN@github.com/hachemico/practica_jenkins.git
