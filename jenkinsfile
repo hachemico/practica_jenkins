@@ -43,8 +43,8 @@ pipeline {
             steps {
                  script{
                     sh ("chmod 777 -R ./jenkinsScripts/Push_changes.js" )
-                    
-                    env.RES3 = sh ( script: "node jenkinsScripts/Push_changes.js $params.ejecutor $params.motivo", returnStatus: true)
+                    WithCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')])
+                    env.RES3 = sh ( script: "node jenkinsScripts/Push_changes.js $params.ejecutor $params.motivo ${TOKEN}", returnStatus: true)
                     // sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
                     
                 }
