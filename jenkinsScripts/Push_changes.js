@@ -1,9 +1,9 @@
 
-const PARAM_EJECUTOR = process.argv[2];
-const PARAM_MOTIVO = process.argv[3];
-
-console.log(usuario);
-console.log(password);
+let PARAM_EJECUTOR = process.argv[2];
+let PARAM_MOTIVO = process.argv[3];
+// let TOKEN = process.argv[4];
+console.log(PARAM_EJECUTOR);
+console.log(PARAM_MOTIVO);
 
 git config --global user.email \'hachemico@gmail.com\'
 git config --global user.name \'hachemico\'
