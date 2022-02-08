@@ -41,9 +41,10 @@ pipeline {
         stage('push_changes') {
             steps {
                  script{
-                     echo "$params.motivo"
-                     echo "$motivo"
-                  sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
+                    sh ("chmod 777 -R ./jenkinsScripts/Push_changes.js" )
+                    
+                    sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
+                    
                 }
             }
         }
