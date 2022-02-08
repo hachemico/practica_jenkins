@@ -43,7 +43,7 @@ pipeline {
                  script{
                      echo "$params.motivo"
                      echo "$motivo"
-                  sh ("node jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
+                  sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
                 }
             }
         }
