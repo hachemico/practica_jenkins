@@ -1,7 +1,9 @@
 
-let PARAM_EJECUTOR = process.argv[2];
-let PARAM_MOTIVO = process.argv[3];
-// let TOKEN = process.argv[4];
+ PARAM_EJECUTOR = process.argv[2];
+ PARAM_MOTIVO = process.argv[3];
+ TOKEN = process.argv[4];
+
+
 console.log(PARAM_EJECUTOR);
 console.log(PARAM_MOTIVO);
 

@@ -6,6 +6,7 @@ pipeline {
      environment {
         RES1 = ' '
         RES2 = ' '
+        RES3 = ' '
     }
     parameters {
         string(name: 'ejecutor', defaultValue: 'Hachemico', description: 'Nombre persona que realiza la accion.')
@@ -43,7 +44,8 @@ pipeline {
                  script{
                     sh ("chmod 777 -R ./jenkinsScripts/Push_changes.js" )
                     
-                    sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
+                    env.RES3 = sh ( script: "node jenkinsScripts/Push_changes.js $params.ejecutor $params.motivo", returnStatus: true)
+                    // sh (" ./jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
                     
                 }
             }
