@@ -38,13 +38,15 @@ pipeline {
                 }
             }
         }
-        // stage('show') {
-        //     steps {
-        //          script{
-        //         //    echo "${env.RES1}"
-        //         }
-        //     }
-        // }
+        stage('push_changes') {
+            steps {
+                 script{
+                     echo "$params.motivo"
+                     echo "$motivo"
+                  sh ("node jenkinsScripts/Push_changes.js  $params.ejecutor $params.motivo " )
+                }
+            }
+        }
         // stage('Parallel Stage') {
         //     parallel{
         //         stage('paralel1') {
