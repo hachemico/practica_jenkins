@@ -59,6 +59,7 @@ Definimos el cron con el uso de POLLSCM (valor CRON)
 
 >Los linters son herramientas de programación que examinan el código del programador y lo ayudan a corregir errores de sintaxis, código incorrecto, malas prácticas o incluso ayudarlo a seguir unas normas de estilo, favoreciendo escribir código de calidad y acostumbrando al usuario a solventar ciertos problemas comunes en fases tempranas (y no tan tempranas) como programador.
 
+
 En nuestro proyecto utilizamos ESLint.
 
 ![Captura de pantalla de 2022-02-09 21-01-47](https://user-images.githubusercontent.com/62303274/153280884-99dc1fdf-ffe4-478b-914c-d360b0a78bc4.png)
@@ -92,11 +93,26 @@ npm run dev & => Realiza el build de cypress.
                  "&" nos asegura que se ejecuta en segundo plano, de modo que se puedan ejecutar los stages posteriores.
 NO_COLOR=1    => Nos permite escapar los simbolos en la ejecución.
 ./node_modules/.bin/cypress run  => arranca los test de cypress.
-RES_TEST => 
+RES_TEST => Obtiene valor "1/0"  del status del test.
 ```
 
 <a name="item4"></a>
 ## UPDATE README
+
+>Ejecutará un script que se encargará de modificar el README.MD del proyecto añadiendo un Badge.
+
+```
+SUCCESS --> https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg
+FAILURE --> https://img.shields.io/badge/test-failure-red
+```
+
+![Captura de pantalla de 2022-02-09 21-24-09](https://user-images.githubusercontent.com/62303274/153284402-36ac7c99-35fd-4454-a021-935c8c95eafc.png)
+
+```
+chmod 777 -R /ruta/script => Bastaría con dar permiso de ejecucion al script "+x".
+node jenkinsScripts/Update_readme.js => Ejecuta el script. Para poder enviar parametros al script se añaden al final con &nombre_parametro.
+RES_UPDATE => Obtiene valor "1/0"  del status del test.
+```
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
