@@ -64,7 +64,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'vercel_Token', variable: 'VTOKEN')]) {
                     // withCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')]){
                     script{
-                            if((RES1 == 0) && (RES2 == 0) && (RES2.toBoolean() == 0)){
+                            if((RES1 == 0) && (RES2 == 0) && (RES3 == 0)){
                                 // echo"${RES1}"
                                 // echo"${RES2}"
                                 echo"${VTOKEN}"
