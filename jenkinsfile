@@ -36,7 +36,7 @@ pipeline {
             steps {
                  script{
                     sh ("chmod 777 -R ./jenkinsScripts/Update_readme.js" )
-                    env.RES2 = sh ( script: "node jenkinsScripts/Update_readme.js $RES1", returnStatus: true)
+                    RES2 = sh ( script: "node jenkinsScripts/Update_readme.js $RES1", returnStatus: true)
                 }
             }
         }
@@ -52,7 +52,7 @@ pipeline {
                         sh(" git remote set-url origin https://$TOKEN@github.com/hachemico/practica_jenkins.git")
                         sh(" git add .")
                         sh(" git commit -m 'Pipeline ejecutada por $params.ejecutor . MOTIVO: $params.motivo'")
-                        env.RES3 = sh ( script: "git push origin HEAD:main ", returnStatus: true)
+                        RES3 = sh ( script: "git push origin HEAD:main ", returnStatus: true)
                     }
                 }
             }
