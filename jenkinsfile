@@ -19,8 +19,9 @@ pipeline {
     stages {
             stage('linter') {
             steps {
-                sh " npm run lint "
-                RES_LINT = sh( script: "npm run lint", returnStatus: true)
+                script{
+                    RES_LINT = sh( script: "npm run lint", returnStatus: true)
+                }
             }
         }
         stage('test') {
