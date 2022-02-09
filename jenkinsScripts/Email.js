@@ -12,7 +12,7 @@ let EMAIL_NOTIF   = process.argv[8]
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: GEMAIL,
+    user: 'hachemico@gmail.com',
     pass: GMAIL_PASS // naturally, replace both with your real credentials or an application-specific password
   }
 });
