@@ -64,10 +64,12 @@ pipeline {
                 withCredentials([string(credentialsId: 'vercel_Token', variable: 'VTOKEN')]) {
                     // withCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')]){
                     script{
-                    
-                        echo"${RES1}"
-                        echo"${RES2}"
-                        echo"${RES3}"
+                    if((RES1.toBoolean() == false) && (RES2.toBoolean() == false) && (RES2.toBoolean() == false)){
+                        // echo"${RES1}"
+                        // echo"${RES2}"
+                        // echo"${RES3}"
+                         RES4 = sh ( script: "vercel . --token $VTOKEN --confirm --name practica-jenkins ", returnStatus: true)
+                         echo"${RES4}"
                     }
                 }
               
