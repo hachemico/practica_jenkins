@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailOptions = {
-  from: GEMAIL,
+  from: 'hachemico@gmail.com',
   to: EMAIL_NOTIF,
   subject: 'Resultado de la pipeline ejecutada',
   html: `<div>
