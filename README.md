@@ -34,11 +34,42 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
  [DEPLOY CON VERCEL](#item6)
   - Introducion Vercel.
   - Contenido.
-  - 
  [NOTIFICACIONES](#item7)
   - Introduccion NodeMailer
   - Contenido.
+<hr>
 
+<a name="item1"></a>
+## TRIGGER
+
+> El trigger verificará cada 3 horas si se han producido cambios en el repositorio y de ser así ejecutara la PIPELINE.
+
+Funcionamiento CRON:
+
+![Captura de pantalla de 2022-02-09 20-48-30](https://user-images.githubusercontent.com/62303274/153279151-7d19f010-3559-4088-b731-fdeda2c9b32c.png)
+
+Definimos el cron con el uso de POLLSCM (valor CRON)
+
+![Captura de pantalla de 2022-02-09 20-51-20](https://user-images.githubusercontent.com/62303274/153279322-96cb140d-9062-4b75-b503-a60696e5a556.png)
+
+
+<a name="item2"></a>
+## LINTER
+
+<a name="item3"></a>
+## TESTS CYPRESS
+
+<a name="item4"></a>
+## UPDATE README
+
+<a name="item5"></a>
+## UPDATE CHANGES "PUSH TO REMOTE"
+
+<a name="item6"></a>
+## DEPLOY VERCEL
+
+<a name="item7"></a>
+## NOTIFICACIONES
 
 <!---Start place for the badge -->
 
@@ -48,10 +79,3 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
 
 
 PRUEBA DE QUE NO BORRA TEXTO DE FUERA!!!
-<a name="item1"></a>
-<a name="item2"></a>
-<a name="item3"></a>
-<a name="item4"></a>
-<a name="item5"></a>
-<a name="item6"></a>
-<a name="item7"></a>
