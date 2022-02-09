@@ -6,8 +6,7 @@ let RES_UPDATE    = process.argv[4] == 0 ? 'SUCCSESS' : 'FAILED'
 let RES_PUSH      = process.argv[5] == 0 ? 'SUCCSESS' : 'FAILED'
 let RES_DEPLOY    = process.argv[6] == 0 ? 'SUCCSESS' : 'FAILED'
 let GMAIL_PASS    = process.argv[7]
-let GEMAIL        = process.argv[8]
-let EMAIL_NOTIF   = process.argv[9]
+let EMAIL_NOTIF   = process.argv[8]
 
 
 const transporter = nodemailer.createTransport({

@@ -73,10 +73,10 @@ pipeline {
             stage('Notificacion'){
             steps{
                 sh ("npm install nodemailer" )
-                withCredentials([string(credentialsId: 'GToken', variable: 'GTOKEN', variable2: 'GEMAIL')]) {
+                withCredentials([string(credentialsId: 'GToken', variable: 'GTOKEN')]) {
                     script{
                                
-                        RES4 = sh ( script: "node jenkinsScripts/Email.js $RES_LINT $RES_TEST $RES_UPDATE $RES_PUSH $RES_DEPLOY $GTOKEN $GEMAIL $params.correo_notificacion", returnStatus: true)
+                        RES4 = sh ( script: "node jenkinsScripts/Email.js $RES_LINT $RES_TEST $RES_UPDATE $RES_PUSH $RES_DEPLOY $GTOKEN $params.correo_notificacion", returnStatus: true)
                     }
                 } 
             }
