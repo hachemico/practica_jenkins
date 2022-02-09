@@ -68,7 +68,7 @@ pipeline {
                                 // echo"${RES1}"
                                 // echo"${RES2}"
                                 echo"${VTOKEN}"
-                                RES4 = sh ( script: 'vercel --prod --scope hachemico --token="$VTOKEN" --confirm --name practica-jenkins ', returnStatus: true)
+                                sh("vercel . --token $VTOKEN --confirm --name practica-jenkins")
                                 echo"${RES4}"
                             }
                             echo"${RES3}"
