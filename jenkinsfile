@@ -4,11 +4,11 @@ pipeline {
         pollSCM('0 */3 * * *') 
     }
      environment {
-        RES_LINT= ' ' 
-        RES_TEST= ' '
-        RES2    = ' '
-        RES3    = ' '
-        RES4    = ' '
+        RES_LINT    = ' ' 
+        RES_TEST    = ' '
+        RES_UPDATE  = ' '
+        RES_PUSH    = ' '
+        RES_DEPLOY  = ' '
     }
     parameters {
         string(name: 'ejecutor', defaultValue: 'Hachemico', description: 'Nombre persona que realiza la accion.')
@@ -20,7 +20,7 @@ pipeline {
             stage('linter') {
             steps {
                 sh " npm run lint "
-                RES_LINT = sh( script: "NO_COLOR=1 ./node_modules/.bin/cypress run ", returnStatus: true)
+                RES_LINT = sh( script: "npm run lint", returnStatus: true)
             }
         }
         stage('test') {
