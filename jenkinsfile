@@ -69,6 +69,7 @@ pipeline {
                         echo"${RES2}"
                         echo"${RES3}"
                     }
+                }
               
             }
 
