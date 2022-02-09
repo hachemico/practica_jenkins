@@ -65,13 +65,11 @@ pipeline {
                     // withCredentials([usernamePassword(credentialsId: 'githubToken', variable: 'TOKEN')]){
                     script{
                             if((RES1 == 0) && (RES2 == 0) && (RES3 == 0)){
-                                // echo"${RES1}"
-                                // echo"${RES2}"
-                                echo"${VTOKEN}"
-                                sh("vercel . --token $VTOKEN --confirm --name practica-jenkins")
-                                echo"${RES4}"
+                               
+                                // sh("vercel . --token $VTOKEN --confirm --name practica-jenkins")
+                                RES4 = sh ( script: "vercel . --token $VTOKEN --confirm --name practica-jenkins", returnStatus: true
                             }
-                            echo"${RES3}"
+                            echo"${RES4}"
                     }
                 }
               
