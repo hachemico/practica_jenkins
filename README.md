@@ -83,7 +83,7 @@ En el caso de superar el linter devuelve 1.
 > Es un framework centrado en la realización de pruebas e2e, pero tambien permite la realización de pruebas unitarias.
 > Las pruebas End-to-End es una metodología de aseguramiento de calidad de software para probar el flujo de la aplicación desde el inicio hasta el final. El objetivo es simular al máximo el comportamiento de un usuario real y validar la integridad y fiabilidad del sistema.
 
-
+#### STAGE
 ![Captura de pantalla de 2022-02-09 21-13-52](https://user-images.githubusercontent.com/62303274/153282663-10cc5181-732c-4d62-913c-d326edae4b4f.png)
 
 ```
@@ -105,6 +105,7 @@ RES_TEST => Obtiene valor "1/0"  del status del test.
 SUCCESS --> https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg
 FAILURE --> https://img.shields.io/badge/test-failure-red
 ```
+#### STAGE
 
 ![Captura de pantalla de 2022-02-09 21-24-09](https://user-images.githubusercontent.com/62303274/153284402-36ac7c99-35fd-4454-a021-935c8c95eafc.png)
 
@@ -124,17 +125,45 @@ data.replace => Busca dentro del documento, la parte que coincide con la expresi
                 /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm y lo sustituye por uno de los badges.
 fs.Writefile => aplica los cambios al archivo.
 ```
-> Conoce más... https://nodejs.dev/learn/reading-files-with-nodejs 
+Conoce más... 
+> https://nodejs.dev/learn/reading-files-with-nodejs
+
+> https://www.mejorcodigo.com/p/98900.html 
 
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
 
+> Ejecutará un script encargado de ejecutar el "Add", "commit" y "Push" de los cambios del readme a nuestro repositorio de código.
+
+#### STAGE
+
+![Captura de pantalla de 2022-02-10 10-27-56](https://user-images.githubusercontent.com/62303274/153378754-baaeaf6f-d7a6-4e18-9db9-1faf7586ce7a.png)
+
+```
+Como en el stage anterior para ejecutar un script primero tiene que tener permisos de ejecución.
+withCredentials => Hay proceso que necesitan de credenciales de usuario para ser ejecutados. Es una forma de declarar valores
+                   que no sean visibles en el código. A continuación vemos como se declaran.
+gitconfig => configuramos el usuario que va a realizar el add,commit, push.
+git remote => seleccionamos el remoto sobre el que realizar las acciones.
+git add . => importante el signo de puntiacion ".". Añadimos los archivos de la localización actual.
+git commit => realiza un commit sobre lo antes indicado.
+git push => sube los archivos al remoto indicados. Importante la anotación HEAD:nombre_rama_remota.
+RES_PUSH => Obtiene valor "1/0"  del status del test.
+```
+#### SCRIPT
+
+
 <a name="item6"></a>
 ## DEPLOY VERCEL
 
+#### STAGE
+#### SCRIPT
+
 <a name="item7"></a>
 ## NOTIFICACIONES
+
+#### STAGE
 
 <!---Start place for the badge -->
 
