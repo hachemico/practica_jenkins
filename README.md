@@ -75,6 +75,27 @@ Para realizar la pipeline:
 Lo primero que nos encontramos es que la ejecución debe parametrizarse. Podemos realizarlo manualmente o como ya hemos definido los parametros en la Pipeline
 cuando ejecutemos por primera vez la tarea, se llenaran automáticamente.
 
+![Captura de pantalla de 2022-02-10 12-24-10](https://user-images.githubusercontent.com/62303274/153398942-2335dae2-5b5f-437b-ba0c-0b33ee06a624.png)
+
+El siguiente apartado que nos encontramos es la de Build Triggers. En este caso definiremos un triguer como veremos en los primeros capitulos del proyecto.
+Al igual que en el paso anterior en el Pipeline, definiremos el trigger. Podemos definirlo también en la tarea o se creara cuando ejecutemos la tarea por primera vez.
+
+![Captura de pantalla de 2022-02-10 12-29-15](https://user-images.githubusercontent.com/62303274/153400105-afbb234f-f1ca-4897-aaea-acede3c93491.png)
+
+PIPELINE
+
+Selecionamos Pipeline script from SMC ya que vamos a trabajar desde GitHub
+SMC => Git
+Repository Url => La url del repositorio Github.
+Credentials => Para que la tarea realize el pipeline desde el repositorio de github. Necesita de credenciales, que tenemos que definir.
+Branch Specifier => la rama del repositorio sobre la que trabajaremos.
+Script Path => el path donde se encuentra el jenkinsfile. El nombre tiene que coincidir con el del repositorio.
+
+Aplly + Guardar
+
+![Captura de pantalla de 2022-02-10 12-32-11](https://user-images.githubusercontent.com/62303274/153400636-2cf43850-318e-493c-bd03-b3fca43c2e5f.png)
+![Captura de pantalla de 2022-02-10 12-32-36](https://user-images.githubusercontent.com/62303274/153400699-385fe8b4-a49d-4810-98bf-553e600c2853.png)
+
 
 <a name="item1"></a>
 ## TRIGGER
