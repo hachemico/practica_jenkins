@@ -263,6 +263,7 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 <hr>
  
 <a name="item6"></a>
+ 
 ## DEPLOY VERCEL
 
  ![Captura de pantalla de 2022-02-10 11-05-11](https://user-images.githubusercontent.com/62303274/153384542-9ecac552-ab72-4ddf-8f15-5f3183e3be01.png)
@@ -285,9 +286,11 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
  ![Captura de pantalla de 2022-02-10 11-07-04](https://user-images.githubusercontent.com/62303274/153384830-b6a0a00c-b1e2-45bd-9937-d35a4600a8cb.png)
 
  ```
- withCredentials => Al igual que en el Stage anterior, requerimos un token, que obtendremos una vez registrados en el sitio web de vercel.
+ withCredentials => Al igual que en el Stage anterior, requerimos un token, 
+                    que obtendremos una vez registrados en el sitio web de vercel.
  vercl . => ejecuta vercel.
- -- token => asigna el token que hemos generado en vercel. En este caso es un credencial declarada como hemos visto anteriormente.
+ -- token => asigna el token que hemos generado en vercel. En este caso es un credencial declarada 
+             como hemos visto anteriormente.
  --confirm => acepta todos los proceso en la llamada.
  --name => asigna un nombre al deploy en la plataforma de vercel.
  ```
