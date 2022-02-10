@@ -44,6 +44,7 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
   - Contenido.
 <hr>
 <a name="itemvar"></a>
+
 ## VARIABLES (environment / parameters)
 
 ####ENVIRONTMENT
