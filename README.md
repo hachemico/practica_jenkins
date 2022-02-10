@@ -153,6 +153,30 @@ RES_PUSH => Obtiene valor "1/0"  del status del test.
 ```
 #### SCRIPT
 
+>Se ha eliminado el script porque estaba dando problemas, así que se ha aplicado todo el proceso,
+>directamente sobre el Stage.
+
+#### CREDENTIALS
+
+Administrar_Jenkins / 
+![Captura de pantalla de 2022-02-10 10-43-23](https://user-images.githubusercontent.com/62303274/153380610-4ccfc111-bbe3-456a-96ad-a528ea721b5f.png)
+ 
+ / Manage_Credentials /
+![Captura de pantalla de 2022-02-10 10-44-56](https://user-images.githubusercontent.com/62303274/153380793-a29b6ca8-aebe-4e59-b205-2f9677d552c7.png)
+
+/Stores Scopet to Jenkins (global) /
+![Captura de pantalla de 2022-02-10 10-45-50](https://user-images.githubusercontent.com/62303274/153381113-c1ba3a4e-79bf-4eaf-b9c5-32601a8939c0.png)
+
+/Global Credentiarls/
+![Captura de pantalla de 2022-02-10 10-47-15](https://user-images.githubusercontent.com/62303274/153381293-57ded2d5-3cbe-46bc-8211-5a7f3f3825aa.png)
+
+/Add Credentials/
+![Captura de pantalla de 2022-02-10 10-48-31](https://user-images.githubusercontent.com/62303274/153381501-1bb60d09-fd8e-4f10-833d-367938c169d4.png)
+
+En este caso se trata de Usuario y Password pero existen otras opciones.
+![Captura de pantalla de 2022-02-10 10-50-57](https://user-images.githubusercontent.com/62303274/153381960-b6d29851-9b74-474c-9399-d78aa97096e3.png)
+
+Para tener un token de github lo tenemos que generar en github e importarlo.
 
 <a name="item6"></a>
 ## DEPLOY VERCEL
