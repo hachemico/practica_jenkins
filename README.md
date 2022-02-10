@@ -61,7 +61,9 @@ queremos aplicar, aunque hemos definido unos valores por defecto.
 
 ![Captura de pantalla de 2022-02-10 12-09-19](https://user-images.githubusercontent.com/62303274/153395111-7c2986cb-a028-4cb9-aced-7da36a55e1c7.png)
 
-> Tanto los parametros como las variables de entorno se definen antes de los Stages que hacen uso de ellas.
+ Tanto los parametros como las variables de entorno se definen antes de los Stages que hacen uso de ellas.
+
+<br>
 
 <a name="itemPipeline"></a>
 ## PIPELINE
@@ -72,8 +74,12 @@ Para realizar la pipeline:
 
 ![Captura de pantalla de 2022-02-10 12-21-45](https://user-images.githubusercontent.com/62303274/153397132-8350180f-f431-4158-84ef-bcda91fd295d.png)
 
+<br>
+
 Lo primero que nos encontramos es que la ejecución debe parametrizarse. Podemos realizarlo manualmente o como ya hemos definido los parametros en la Pipeline
 cuando ejecutemos por primera vez la tarea, se llenaran automáticamente.
+
+<br>
 
 ![Captura de pantalla de 2022-02-10 12-24-10](https://user-images.githubusercontent.com/62303274/153398942-2335dae2-5b5f-437b-ba0c-0b33ee06a624.png)
 
