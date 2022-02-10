@@ -312,7 +312,7 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 
 <strong>Para tener un token de github lo tenemos que generar en github e importarlo.</strong>
 
-<br>
+
  
  Como resultado de este Stage y el anterior tenemos que el badge Aparece en el Readme:
  
@@ -323,6 +323,11 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
  
 <!---End place for the badge -->
+ 
+#### RESULTADO
+ 
+ ![Captura de pantalla de 2022-02-10 12-57-16](https://user-images.githubusercontent.com/62303274/153404257-0138a12d-c9f5-4491-a72e-a32cf68dc9bc.png)
+
  
 <hr>
  
@@ -382,6 +387,10 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
  <br>
  
  > ENLACE AL DEPLOY : https://practica-jenkins-8eqr0hg9s-hachemico.vercel.app/
+ <br>
+ 
+ ![Captura de pantalla de 2022-02-10 12-57-56](https://user-images.githubusercontent.com/62303274/153404372-de550bc5-47da-4c40-a336-cf826a8ddcf8.png)
+
  
 <hr>
  
@@ -437,8 +446,20 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
 
 ![Captura de pantalla de 2022-02-10 11-41-48](https://user-images.githubusercontent.com/62303274/153390720-c0fd8679-e043-4830-8d06-a25be4948045.png)
 
+ #### RESULTADO
+ 
+ ![Captura de pantalla de 2022-02-10 12-58-26](https://user-images.githubusercontent.com/62303274/153404517-43504ae8-eb3a-4b53-bdbf-44201b7ebb4a.png)
+
+ <br>
+ <hr>
+Como resultado final se adjunta el processo completo.
+ 
  <hr>
  
+ ![Captura de pantalla de 2022-02-10 13-01-31](https://user-images.githubusercontent.com/62303274/153404912-e18d326f-74b0-4fa2-95cd-7f28121f0f81.png)
+
+ 
+ <hr>
  <br>
  
  <a name="item8"></a>
