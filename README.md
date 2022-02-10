@@ -85,13 +85,13 @@ Al igual que en el paso anterior en el Pipeline, definiremos el trigger. Podemos
 PIPELINE
 
 Selecionamos Pipeline script from SMC ya que vamos a trabajar desde GitHub
-SMC => Git
-Repository Url => La url del repositorio Github.
-Credentials => Para que la tarea realize el pipeline desde el repositorio de github. Necesita de credenciales, que tenemos que definir.
-Branch Specifier => la rama del repositorio sobre la que trabajaremos.
-Script Path => el path donde se encuentra el jenkinsfile. El nombre tiene que coincidir con el del repositorio.
+- SMC => Git
+- Repository Url => La url del repositorio Github.
+- Credentials => Para que la tarea realize el pipeline desde el repositorio de github. Necesita de credenciales, que tenemos que definir.
+- Branch Specifier => la rama del repositorio sobre la que trabajaremos.
+- Script Path => el path donde se encuentra el jenkinsfile. El nombre tiene que coincidir con el del repositorio.
 
-Aplly + Guardar
+- Aplly + Guardar
 
 ![Captura de pantalla de 2022-02-10 12-32-11](https://user-images.githubusercontent.com/62303274/153400636-2cf43850-318e-493c-bd03-b3fca43c2e5f.png)
 ![Captura de pantalla de 2022-02-10 12-32-36](https://user-images.githubusercontent.com/62303274/153400699-385fe8b4-a49d-4810-98bf-553e600c2853.png)
@@ -170,7 +170,8 @@ FAILURE --> https://img.shields.io/badge/test-failure-red
 
 ```
 chmod 777 -R /ruta/script => Bastaría con dar permiso de ejecucion al script "+x".
-node jenkinsScripts/Update_readme.js => Ejecuta el script. Para poder enviar parametros al script se añaden al final con &nombre_parametro.
+node jenkinsScripts/Update_readme.js => Ejecuta el script. Para poder enviar parametros al script se añaden al final 
+                                        con &nombre_parametro.
 RES_UPDATE => Obtiene valor "1/0"  del status del test.
 ```
 #### SCRIPT
@@ -205,8 +206,9 @@ El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero 
 
 ```
 Como en el stage anterior para ejecutar un script primero tiene que tener permisos de ejecución.
-withCredentials => Hay proceso que necesitan de credenciales de usuario para ser ejecutados. Es una forma de declarar valores
-                   que no sean visibles en el código. A continuación vemos como se declaran.
+withCredentials => Hay proceso que necesitan de credenciales de usuario para ser ejecutados. 
+                   Es una forma de declarar valores que no sean visibles en el código. 
+                   A continuación vemos como se declaran.
 gitconfig => configuramos el usuario que va a realizar el add,commit, push.
 git remote => seleccionamos el remoto sobre el que realizar las acciones.
 git add . => importante el signo de puntiacion ".". Añadimos los archivos de la localización actual.
