@@ -280,4 +280,5 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
  ```
  Con la ejecucion del Stage y el correspondiente Script obtenemos un correo.
  
- ![Captura de pantalla de 2022-02-10 11-38-24](https://user-images.githubusercontent.com/62303274/153390617-5128d98a-0032-4dc4-bc10-f3bc8ce08a99.png)
+
+![Captura de pantalla de 2022-02-10 11-41-48](https://user-images.githubusercontent.com/62303274/153390720-c0fd8679-e043-4830-8d06-a25be4948045.png)
