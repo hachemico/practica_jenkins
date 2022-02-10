@@ -308,4 +308,17 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
 
  ![Captura de pantalla de 2022-02-10 11-54-26](https://user-images.githubusercontent.com/62303274/153392637-d7fdb9b8-6991-4f4c-be3d-d45e0aa835ca.png)
 
+ Asignamos nombre a la vista y seleccionamos la opcion Dashboard y CREATE.
+ A continuación nos aparecen una serie de opciones sobre las que trasteamos un poco para probar i definir la vista.
  
+ ![Captura de pantalla de 2022-02-10 11-57-07](https://user-images.githubusercontent.com/62303274/153393168-383b776c-85c7-400a-8304-2071713f02bd.png)
+ 
+ Sobre el menu principal nos aparece una nueva vista junto a TODO.
+ 
+ ![Captura de pantalla de 2022-02-10 11-58-03](https://user-images.githubusercontent.com/62303274/153393325-4e7fac79-d921-4b6c-9781-f95d081fc952.png)
+
+ Si pulsamos nos aparece la ejecucion asociada al proyecto.
+ 
+ ![Captura de pantalla de 2022-02-10 11-59-20](https://user-images.githubusercontent.com/62303274/153393473-9a78450b-fb6e-4eaf-b683-80915eecb83a.png)
+
+
