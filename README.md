@@ -42,6 +42,7 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
 - [NOTIFICACIONES](#item7)
   - Introduccion NodeMailer
   - Contenido.
+ - [DASHBOARD VIEW](#item8)
 <hr>
 <a name="itemvar"></a>
 
@@ -86,7 +87,11 @@ cuando ejecutemos por primera vez la tarea, se llenaran automáticamente.
 El siguiente apartado que nos encontramos es la de Build Triggers. En este caso definiremos un triguer como veremos en los primeros capitulos del proyecto.
 Al igual que en el paso anterior en el Pipeline, definiremos el trigger. Podemos definirlo también en la tarea o se creara cuando ejecutemos la tarea por primera vez.
 
+<br>
+
 ![Captura de pantalla de 2022-02-10 12-29-15](https://user-images.githubusercontent.com/62303274/153400105-afbb234f-f1ca-4897-aaea-acede3c93491.png)
+
+<br>
 
 PIPELINE
 
@@ -99,9 +104,12 @@ Selecionamos Pipeline script from SMC ya que vamos a trabajar desde GitHub
 
 - Aplly + Guardar
 
+<br>
+
 ![Captura de pantalla de 2022-02-10 12-32-11](https://user-images.githubusercontent.com/62303274/153400636-2cf43850-318e-493c-bd03-b3fca43c2e5f.png)
 ![Captura de pantalla de 2022-02-10 12-32-36](https://user-images.githubusercontent.com/62303274/153400699-385fe8b4-a49d-4810-98bf-553e600c2853.png)
 
+<br>
 
 <a name="item1"></a>
 ## TRIGGER
@@ -111,6 +119,7 @@ Selecionamos Pipeline script from SMC ya que vamos a trabajar desde GitHub
 Funcionamiento CRON:
 
 ![Captura de pantalla de 2022-02-09 20-48-30](https://user-images.githubusercontent.com/62303274/153279151-7d19f010-3559-4088-b731-fdeda2c9b32c.png)
+
 
 Definimos el cron con el uso de POLLSCM (valor CRON)
 
@@ -122,10 +131,13 @@ Definimos el cron con el uso de POLLSCM (valor CRON)
 
 >Los linters son herramientas de programación que examinan el código del programador y lo ayudan a corregir errores de sintaxis, código incorrecto, malas prácticas o incluso ayudarlo a seguir unas normas de estilo, favoreciendo escribir código de calidad y acostumbrando al usuario a solventar ciertos problemas comunes en fases tempranas (y no tan tempranas) como programador.
 
+<br>
 
 En nuestro proyecto utilizamos ESLint.
 
 ![Captura de pantalla de 2022-02-09 21-01-47](https://user-images.githubusercontent.com/62303274/153280884-99dc1fdf-ffe4-478b-914c-d360b0a78bc4.png)
+
+<br>
 
 Dentro de cada step utilizamos un script{} para definir las acciones que realizamos.
 
@@ -136,7 +148,10 @@ RES_LINT= nos devuelve el estado de la ejecucion del linter.
 npm run lint => ejecuta el linter, cada vez que detecte errores de sintaxis establecido nos devuelve un valor 1. 
 En el caso de superar el linter devuelve 1.
 ```
+
 <hr>
+
+<br>
 
 <a name="item3"></a>
 ## TESTS CYPRESS
@@ -147,7 +162,10 @@ En el caso de superar el linter devuelve 1.
 > Es un framework centrado en la realización de pruebas e2e, pero tambien permite la realización de pruebas unitarias.
 > Las pruebas End-to-End es una metodología de aseguramiento de calidad de software para probar el flujo de la aplicación desde el inicio hasta el final. El objetivo es simular al máximo el comportamiento de un usuario real y validar la integridad y fiabilidad del sistema.
 
+<br>
+
 #### STAGE
+
 ![Captura de pantalla de 2022-02-09 21-13-52](https://user-images.githubusercontent.com/62303274/153282663-10cc5181-732c-4d62-913c-d326edae4b4f.png)
 
 ```
@@ -161,18 +179,26 @@ RES_TEST => Obtiene valor "1/0"  del status del test.
 ```
 <hr>
 
+<br>
+
 <a name="item4"></a>
 ## UPDATE README
 
 >Ejecutará un script que se encargará de modificar el README.MD del proyecto añadiendo un Badge.
 
+<br>
+
 ```
 SUCCESS --> https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg
 FAILURE --> https://img.shields.io/badge/test-failure-red
 ```
+<br>
+
 #### STAGE
 
 ![Captura de pantalla de 2022-02-09 21-24-09](https://user-images.githubusercontent.com/62303274/153284402-36ac7c99-35fd-4454-a021-935c8c95eafc.png)
+
+<br>
 
 ```
 chmod 777 -R /ruta/script => Bastaría con dar permiso de ejecucion al script "+x".
@@ -180,9 +206,13 @@ node jenkinsScripts/Update_readme.js => Ejecuta el script. Para poder enviar par
                                         con &nombre_parametro.
 RES_UPDATE => Obtiene valor "1/0"  del status del test.
 ```
+<br>
+
 #### SCRIPT
 
 ![Captura de pantalla de 2022-02-10 10-11-39](https://user-images.githubusercontent.com/62303274/153374959-2aafab81-1e76-47c3-b2f2-2c2c3d8c5046.png)
+
+<br>
 
 ```
 Se declaran los parametros de entrada con process.argv[2]
@@ -191,6 +221,9 @@ data.replace => Busca dentro del documento, la parte que coincide con la expresi
                 /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm y lo sustituye por uno de los badges.
 fs.Writefile => aplica los cambios al archivo.
 ```
+
+<br>
+
 Conoce más... 
 > https://nodejs.dev/learn/reading-files-with-nodejs
 
@@ -198,8 +231,10 @@ Conoce más...
 
 
 El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero para nosotros solo será visible cuando se realize el Stage que describimos a continuación.
-<br>
+
 <hr>
+
+<br>
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
@@ -209,6 +244,8 @@ El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero 
 #### STAGE
 
 ![Captura de pantalla de 2022-02-10 10-27-56](https://user-images.githubusercontent.com/62303274/153378754-baaeaf6f-d7a6-4e18-9db9-1faf7586ce7a.png)
+
+<br>
 
 ```
 Como en el stage anterior para ejecutar un script primero tiene que tener permisos de ejecución.
@@ -222,10 +259,15 @@ git commit => realiza un commit sobre lo antes indicado.
 git push => sube los archivos al remoto indicados. Importante la anotación HEAD:nombre_rama_remota.
 RES_PUSH => Obtiene valor "1/0"  del status del test.
 ```
+
+<br>
+
 #### SCRIPT
 
 >Se ha eliminado el script porque estaba dando problemas, así que se ha aplicado todo el proceso,
 >directamente sobre el Stage.
+
+<br>
 
 #### CREDENTIALS
 
@@ -255,7 +297,8 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 
 <strong>Para tener un token de github lo tenemos que generar en github e importarlo.</strong>
 
-  
+<br>
+ 
  Como resultado de este Stage y el anterior tenemos que el badge Aparece en el Readme:
  
  ####BADGE UPDATE README.MD
@@ -267,6 +310,9 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 <!---End place for the badge -->
  
 <hr>
+ 
+<br>
+
  
 <a name="item6"></a>
  
@@ -283,14 +329,21 @@ Brindamos una experiencia de desarrollador sin fricciones para encargarse de las
 
 Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de experiencias de usuario agradables, donde el rendimiento es el valor predeterminado.
 ``` 
- > https://vercel.com/docs/get-started
+ 
+ <br>
+ 
+> https://vercel.com/docs/get-started
  
 >Ejecutará un script encargado de publicar el proyecto en la plataforma de vercel. Se ejecutará solo si el resto de Stages anteriores han sido satisfactorias.
+
+ <br>
  
 #### STAGE
 
  ![Captura de pantalla de 2022-02-10 11-07-04](https://user-images.githubusercontent.com/62303274/153384830-b6a0a00c-b1e2-45bd-9937-d35a4600a8cb.png)
 
+ <br>
+ 
  ```
  withCredentials => Al igual que en el Stage anterior, requerimos un token, 
                     que obtendremos una vez registrados en el sitio web de vercel.
@@ -300,17 +353,24 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
  --confirm => acepta todos los proceso en la llamada.
  --name => asigna un nombre al deploy en la plataforma de vercel.
  ```
+ <br>
  
  Si todos los Stages anteriores son satisfactorios se desplega el proyecto en vercel. Cuando te registras en vercel, puedes realizar un deploy de prueba
  importando el proyecto directamente desde github y ejecutandolo manualmente. Puedes registrarte con tu correo o con github.
-  
- ![Captura de pantalla de 2022-02-10 11-14-55](https://user-images.githubusercontent.com/62303274/153386042-84ba257b-d32a-468a-995c-34f0d71179bb.png)
+ 
+ <br>
+ 
+![Captura de pantalla de 2022-02-10 11-14-55](https://user-images.githubusercontent.com/62303274/153386042-84ba257b-d32a-468a-995c-34f0d71179bb.png)
  
 ![Captura de pantalla de 2022-02-10 11-15-36](https://user-images.githubusercontent.com/62303274/153386147-5f9f33bf-0a28-4053-9714-defd4ce853c3.png)
+
+ <br>
  
  > ENLACE AL DEPLOY : https://practica-jenkins-8eqr0hg9s-hachemico.vercel.app/
  
 <hr>
+ 
+<br>
  
 <a name="item7"></a>
 ## NOTIFICACIONES
@@ -319,14 +379,21 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
 #### INTRO
  
  Nodemailer es un módulo para aplicaciones Node.js que permite enviar correos electrónicos de forma sencilla. El proyecto comenzó en 2010 cuando no había una opción sensata para enviar mensajes de correo electrónico, hoy en día es la solución a la que recurren la mayoría de los usuarios de Node.js de forma predeterminada.
- 
-> URL: https://nodemailer.com/about/
+
+ <br> 
+
+ > URL: https://nodemailer.com/about/
  
 > Se encargara de enviar un correo.
-#### STAGE
+
+ <br>
+ 
+ #### STAGE
 
 ![Captura de pantalla de 2022-02-10 11-31-40](https://user-images.githubusercontent.com/62303274/153389063-b0793faa-bc3f-4a03-9ee9-e3d45a80dbf8.png)
 
+ <br>
+ 
 ```
  npm install nodemailer => instala nodemailer.
  withCredentials => Para enviar correo en este caso a traves de Gmail, tenemos que obtener un token del propio Gmail.
@@ -336,10 +403,14 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
 &RES_LINT, &RES_TEST, &RES_UPDATE, $RES_DEPLOY, $GTOKEN, "params.correo_notificacion son parametros de entrada del script.
  
 ```
+ <br>
+ 
  #### SCRIPT
  
  ![Captura de pantalla de 2022-02-10 11-38-24](https://user-images.githubusercontent.com/62303274/153390102-6d24edbc-7c12-4f36-8aae-8494db9f8bdc.png)
 
+ <br>
+ 
  ```
  El scripts requiere de "nodemailer".
  Declaramos los parametros de entrada y los asignamos a variables y los valores que tendran de respuesta.
@@ -351,6 +422,9 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
 
 ![Captura de pantalla de 2022-02-10 11-41-48](https://user-images.githubusercontent.com/62303274/153390720-c0fd8679-e043-4830-8d06-a25be4948045.png)
 
+ <hr>
+ 
+ <br>
  
  <a name="item8"></a>
 ## DASHBOARD VIEW
