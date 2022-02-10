@@ -73,6 +73,7 @@ RES_LINT= nos devuelve el estado de la ejecucion del linter.
 npm run lint => ejecuta el linter, cada vez que detecte errores de sintaxis establecido nos devuelve un valor 1. 
 En el caso de superar el linter devuelve 1.
 ```
+<hr>
 
 <a name="item3"></a>
 ## TESTS CYPRESS
@@ -95,6 +96,7 @@ NO_COLOR=1    => Nos permite escapar los simbolos en la ejecución.
 ./node_modules/.bin/cypress run  => arranca los test de cypress.
 RES_TEST => Obtiene valor "1/0"  del status del test.
 ```
+<hr>
 
 <a name="item4"></a>
 ## UPDATE README
@@ -130,6 +132,7 @@ Conoce más...
 
 > https://www.mejorcodigo.com/p/98900.html 
 
+<hr>
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
@@ -158,29 +161,50 @@ RES_PUSH => Obtiene valor "1/0"  del status del test.
 
 #### CREDENTIALS
 
-Administrar_Jenkins / 
+<strong>Administrar_Jenkins / </strong>
+
 ![Captura de pantalla de 2022-02-10 10-43-23](https://user-images.githubusercontent.com/62303274/153380610-4ccfc111-bbe3-456a-96ad-a528ea721b5f.png)
  
- / Manage_Credentials /
+ <strong>/ Manage_Credentials /
+ 
 ![Captura de pantalla de 2022-02-10 10-44-56](https://user-images.githubusercontent.com/62303274/153380793-a29b6ca8-aebe-4e59-b205-2f9677d552c7.png)
 
-/Stores Scopet to Jenkins (global) /
+<strong>/Stores Scopet to Jenkins (global) /</strong>
+
 ![Captura de pantalla de 2022-02-10 10-45-50](https://user-images.githubusercontent.com/62303274/153381113-c1ba3a4e-79bf-4eaf-b9c5-32601a8939c0.png)
 
-/Global Credentiarls/
+<strong>/Global Credentiarls/</strong>
+
 ![Captura de pantalla de 2022-02-10 10-47-15](https://user-images.githubusercontent.com/62303274/153381293-57ded2d5-3cbe-46bc-8211-5a7f3f3825aa.png)
 
-/Add Credentials/
+<strong>/Add Credentials/</strong>
+
 ![Captura de pantalla de 2022-02-10 10-48-31](https://user-images.githubusercontent.com/62303274/153381501-1bb60d09-fd8e-4f10-833d-367938c169d4.png)
 
 En este caso se trata de Usuario y Password pero existen otras opciones.
+
 ![Captura de pantalla de 2022-02-10 10-50-57](https://user-images.githubusercontent.com/62303274/153381960-b6d29851-9b74-474c-9399-d78aa97096e3.png)
 
-Para tener un token de github lo tenemos que generar en github e importarlo.
+<strong>Para tener un token de github lo tenemos que generar en github e importarlo.</strong>
 
+ <hr>
+ 
 <a name="item6"></a>
 ## DEPLOY VERCEL
 
+ ![Captura de pantalla de 2022-02-10 11-05-11](https://user-images.githubusercontent.com/62303274/153384542-9ecac552-ab72-4ddf-8f15-5f3183e3be01.png)
+ 
+#### INTRO
+ 
+``` 
+Vercel es una plataforma para marcos frontend y sitios estáticos , creada para integrarse con su contenido, comercio o base de datos sin cabeza.
+
+Brindamos una experiencia de desarrollador sin fricciones para encargarse de las cosas difíciles: implementar instantáneamente, escalar automáticamente y brindar contenido personalizado en todo el mundo.
+
+Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de experiencias de usuario agradables, donde el rendimiento es el valor predeterminado.
+``` 
+ > https://vercel.com/docs/get-started
+ 
 #### STAGE
 #### SCRIPT
 
