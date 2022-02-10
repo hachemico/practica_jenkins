@@ -242,6 +242,7 @@ Conoce más...
 El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero para nosotros solo será visible cuando se realize el Stage que describimos a continuación.
 
 <br>
+
 #### RESULTADO
 
 ![Uploading Captura de pantalla de 2022-02-10 12-51-16.png…]()
