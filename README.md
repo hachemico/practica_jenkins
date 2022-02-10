@@ -134,6 +134,9 @@ Conoce más...
 
 <hr>
 
+El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero para nosotros solo será visible cuando se realize el Stage que describimos a continuación.
+
+
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
 
@@ -188,6 +191,17 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 <strong>Para tener un token de github lo tenemos que generar en github e importarlo.</strong>
 
  <hr>
+ 
+ Como resultado de este Stage y el anterior tenemos que el badge Aparece en el Readme:
+ 
+ ####BADGE UPDATE README.MD
+ 
+ <!---Start place for the badge -->
+
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+ 
+<!---End place for the badge -->
+ 
  
 <a name="item6"></a>
 ## DEPLOY VERCEL
@@ -251,4 +265,3 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
 <!---End place for the badge -->
 
 
-PRUEBA DE QUE NO BORRA TEXTO DE FUERA!!!
