@@ -218,19 +218,28 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
  --confirm => acepta todos los proceso en la llamada.
  --name => asigna un nombre al deploy en la plataforma de vercel.
  ```
- Si todos los Stages anteriores son satisfactorios se desplega el proyecto en vercel.
+ 
+ Si todos los Stages anteriores son satisfactorios se desplega el proyecto en vercel. Cuando te registras en vercel, puedes realizar un deploy de prueba
+ importando el proyecto directamente desde github y ejecutandolo manualmente. Puedes registrarte con tu correo o con github.
   
  ![Captura de pantalla de 2022-02-10 11-14-55](https://user-images.githubusercontent.com/62303274/153386042-84ba257b-d32a-468a-995c-34f0d71179bb.png)
  
 ![Captura de pantalla de 2022-02-10 11-15-36](https://user-images.githubusercontent.com/62303274/153386147-5f9f33bf-0a28-4053-9714-defd4ce853c3.png)
  
  > ENLACE AL DEPLOY : https://practica-jenkins-8eqr0hg9s-hachemico.vercel.app/
-
-#### SCRIPT
-
+ 
+<hr>
+ 
 <a name="item7"></a>
 ## NOTIFICACIONES
+ ![Captura de pantalla de 2022-02-10 11-23-15](https://user-images.githubusercontent.com/62303274/153387467-0ec45519-fe54-488e-8ea0-b0dbff677e86.png)
 
+#### INTRO
+ 
+ Nodemailer es un módulo para aplicaciones Node.js que permite enviar correos electrónicos de forma sencilla. El proyecto comenzó en 2010 cuando no había una opción sensata para enviar mensajes de correo electrónico, hoy en día es la solución a la que recurren la mayoría de los usuarios de Node.js de forma predeterminada.
+ 
+> URL: https://nodemailer.com/about/
+ 
 #### STAGE
 
 <!---Start place for the badge -->
