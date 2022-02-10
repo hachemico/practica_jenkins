@@ -148,6 +148,10 @@ RES_LINT= nos devuelve el estado de la ejecucion del linter.
 npm run lint => ejecuta el linter, cada vez que detecte errores de sintaxis establecido nos devuelve un valor 1. 
 En el caso de superar el linter devuelve 1.
 ```
+#### RESULTADO
+
+![Captura de pantalla de 2022-02-10 12-49-16](https://user-images.githubusercontent.com/62303274/153403084-ad4fe9b5-93aa-4abb-a425-c59b73589ba0.png)
+
 
 <hr>
 
@@ -177,6 +181,11 @@ NO_COLOR=1    => Nos permite escapar los simbolos en la ejecución.
 ./node_modules/.bin/cypress run  => arranca los test de cypress.
 RES_TEST => Obtiene valor "1/0"  del status del test.
 ```
+<br>
+#### RESULTADO
+
+![Captura de pantalla de 2022-02-10 12-50-01](https://user-images.githubusercontent.com/62303274/153403254-47f5a58a-33d9-4ff9-9137-68e04289e806.png)
+
 <hr>
 
 <br>
@@ -231,6 +240,12 @@ Conoce más...
 
 
 El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero para nosotros solo será visible cuando se realize el Stage que describimos a continuación.
+
+<br>
+#### RESULTADO
+
+![Uploading Captura de pantalla de 2022-02-10 12-51-16.png…]()
+
 
 <hr>
 
@@ -301,7 +316,7 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
  
  Como resultado de este Stage y el anterior tenemos que el badge Aparece en el Readme:
  
- ####BADGE UPDATE README.MD
+ #### BADGE UPDATE README.MD
  
  <!---Start place for the badge -->
 
