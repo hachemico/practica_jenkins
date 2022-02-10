@@ -20,6 +20,10 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
 
 ### Contenido
 
+- [VARIABLES](#itemvar)
+
+- [PIPELINE](#itemPipeline)
+
 - [TRIGGER](#item1)
  
 - [LINTER](#item2)
@@ -39,6 +43,23 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
   - Introduccion NodeMailer
   - Contenido.
 <hr>
+<a name="itemvar"></a>
+## VARIABLES (environment / parameters)
+
+####ENVIRONTMENT
+
+Las variables de environment son aquella que vamos a utilizar dentro de la pipeline, son aquellas sobre las que guardaremos valores.
+En este caso son las que contendran el resultado de cada uno de los Stages.
+
+![Captura de pantalla de 2022-02-10 12-03-30](https://user-images.githubusercontent.com/62303274/153394206-20757ba4-135e-4d5d-9da8-3801e7aa9559.png)
+
+####PARAMETERS
+Son los parametros de entrada de nuestra Pipeline, cuando ejecutemos la pipeline, nos aparece una ventanda modal donde introduciremos los valors que
+queremos aplicar, aunque hemos definido unos valores por defecto.
+
+
+<a name="itemPipeline"></a>
+## PIPELINE
 
 <a name="item1"></a>
 ## TRIGGER
