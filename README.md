@@ -47,20 +47,34 @@ Partiendo del proyecto aportado, creado con el framework [NEXT.JS](https://githu
 
 ## VARIABLES (environment / parameters)
 
-####ENVIRONTMENT
+#### ENVIRONTMENT
 
 Las variables de environment son aquella que vamos a utilizar dentro de la pipeline, son aquellas sobre las que guardaremos valores.
 En este caso son las que contendran el resultado de cada uno de los Stages.
 
 ![Captura de pantalla de 2022-02-10 12-03-30](https://user-images.githubusercontent.com/62303274/153394206-20757ba4-135e-4d5d-9da8-3801e7aa9559.png)
 
-####PARAMETERS
+#### PARAMETERS
+
 Son los parametros de entrada de nuestra Pipeline, cuando ejecutemos la pipeline, nos aparece una ventanda modal donde introduciremos los valors que
 queremos aplicar, aunque hemos definido unos valores por defecto.
 
+![Captura de pantalla de 2022-02-10 12-09-19](https://user-images.githubusercontent.com/62303274/153395111-7c2986cb-a028-4cb9-aced-7da36a55e1c7.png)
+
+> Tanto los parametros como las variables de entorno se definen antes de los Stages que hacen uso de ellas.
 
 <a name="itemPipeline"></a>
 ## PIPELINE
+Para realizar la pipeline:
+ - Nueva Tarea / 
+ - Introduciomos el nombre de la Tarea
+ - Seleccionamos Pipeline
+
+![Captura de pantalla de 2022-02-10 12-21-45](https://user-images.githubusercontent.com/62303274/153397132-8350180f-f431-4158-84ef-bcda91fd295d.png)
+
+Lo primero que nos encontramos es que la ejecución debe parametrizarse. Podemos realizarlo manualmente o como ya hemos definido los parametros en la Pipeline
+cuando ejecutemos por primera vez la tarea, se llenaran automáticamente.
+
 
 <a name="item1"></a>
 ## TRIGGER
