@@ -205,7 +205,27 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
 ``` 
  > https://vercel.com/docs/get-started
  
+>Ejecutará un script encargado de publicar el proyecto en la plataforma de vercel. Se ejecutará solo si el resto de Stages anteriores han sido satisfactorias.
+ 
 #### STAGE
+
+ ![Captura de pantalla de 2022-02-10 11-07-04](https://user-images.githubusercontent.com/62303274/153384830-b6a0a00c-b1e2-45bd-9937-d35a4600a8cb.png)
+
+ ```
+ withCredentials => Al igual que en el Stage anterior, requerimos un token, que obtendremos una vez registrados en el sitio web de vercel.
+ vercl . => ejecuta vercel.
+ -- token => asigna el token que hemos generado en vercel. En este caso es un credencial declarada como hemos visto anteriormente.
+ --confirm => acepta todos los proceso en la llamada.
+ --name => asigna un nombre al deploy en la plataforma de vercel.
+ ```
+ Si todos los Stages anteriores son satisfactorios se desplega el proyecto en vercel.
+  
+ ![Captura de pantalla de 2022-02-10 11-14-55](https://user-images.githubusercontent.com/62303274/153386042-84ba257b-d32a-468a-995c-34f0d71179bb.png)
+ 
+![Captura de pantalla de 2022-02-10 11-15-36](https://user-images.githubusercontent.com/62303274/153386147-5f9f33bf-0a28-4053-9714-defd4ce853c3.png)
+ 
+ > ENLACE AL DEPLOY : https://practica-jenkins-8eqr0hg9s-hachemico.vercel.app/
+
 #### SCRIPT
 
 <a name="item7"></a>
@@ -216,6 +236,8 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
 <!---Start place for the badge -->
 
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+ 
+ 
 
 <!---End place for the badge -->
 
