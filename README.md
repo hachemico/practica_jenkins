@@ -274,7 +274,7 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
 
  ```
  El scripts requiere de "nodemailer".
- Declaramos los parametros de entrada y los asignamos a variables.
+ Declaramos los parametros de entrada y los asignamos a variables y los valores que tendran de respuesta.
  Asignamos los valores o variables en los campos correspondientes.
  En el apartado text o html, definimos el cuerpo del mensaje que queremos mostrar.
  ```
@@ -282,3 +282,30 @@ node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
  
 
 ![Captura de pantalla de 2022-02-10 11-41-48](https://user-images.githubusercontent.com/62303274/153390720-c0fd8679-e043-4830-8d06-a25be4948045.png)
+
+ 
+ <a name="item8"></a>
+## DASHBOARD VIEW
+ 
+ > Instala el plugin Dashboard_view y configura el dashboard en jenkins.
+ 
+ Para instalar un plugin en jenkins:
+ Administrar Jenkins/
+ 
+ ![Captura de pantalla de 2022-02-10 10-43-23](https://user-images.githubusercontent.com/62303274/153392106-877f1d18-7fb8-44d9-ae3b-c27179bf31dc.png)
+ 
+ Administrar Plugins
+ 
+ ![Captura de pantalla de 2022-02-10 11-51-41](https://user-images.githubusercontent.com/62303274/153392218-506ddbb9-5fad-4cf6-a6a3-a17ed17444d3.png)
+
+ Buscamos el plugin y lo instalamos.
+ 
+ ![Captura de pantalla de 2022-02-10 11-52-42](https://user-images.githubusercontent.com/62303274/153392401-bf268a5f-c4b5-4813-9998-48b28f3bc25f.png)
+
+ 
+ En la seccion principar de Jenkins nos aparece una opcion nueva. NEW VIEW.
+ 
+
+ ![Captura de pantalla de 2022-02-10 11-54-26](https://user-images.githubusercontent.com/62303274/153392637-d7fdb9b8-6991-4f4c-be3d-d45e0aa835ca.png)
+
+ 
