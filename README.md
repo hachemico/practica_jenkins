@@ -245,7 +245,8 @@ El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero 
 
 #### RESULTADO
 
-![Uploading Captura de pantalla de 2022-02-10 12-51-16.png…]()
+
+![Captura de pantalla de 2022-02-10 13-07-14](https://user-images.githubusercontent.com/62303274/153405711-6f7f2452-8028-4f1b-a136-422a741b86d2.png)
 
 
 <hr>
