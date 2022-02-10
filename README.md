@@ -113,6 +113,19 @@ chmod 777 -R /ruta/script => Bastaría con dar permiso de ejecucion al script "+
 node jenkinsScripts/Update_readme.js => Ejecuta el script. Para poder enviar parametros al script se añaden al final con &nombre_parametro.
 RES_UPDATE => Obtiene valor "1/0"  del status del test.
 ```
+#### SCRIPT
+
+![Captura de pantalla de 2022-02-10 10-11-39](https://user-images.githubusercontent.com/62303274/153374959-2aafab81-1e76-47c3-b2f2-2c2c3d8c5046.png)
+
+```
+Se declaran los parametros de entrada con process.argv[2]
+fs.readfile => Se encarga de leer un archivo.
+data.replace => Busca dentro del documento, la parte que coincide con la expresión:
+                /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm y lo sustituye por uno de los badges.
+fs.Writefile => aplica los cambios al archivo.
+```
+> Conoce más... https://nodejs.dev/learn/reading-files-with-nodejs 
+
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
