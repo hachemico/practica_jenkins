@@ -132,10 +132,10 @@ Conoce más...
 
 > https://www.mejorcodigo.com/p/98900.html 
 
-<hr>
 
 El resultado de esta Stage actualiza el README.md. introduciendo el badge. Pero para nosotros solo será visible cuando se realize el Stage que describimos a continuación.
-
+<br>
+<hr>
 
 <a name="item5"></a>
 ## UPDATE CHANGES "PUSH TO REMOTE"
@@ -190,8 +190,7 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
 
 <strong>Para tener un token de github lo tenemos que generar en github e importarlo.</strong>
 
- <hr>
- 
+  
  Como resultado de este Stage y el anterior tenemos que el badge Aparece en el Readme:
  
  ####BADGE UPDATE README.MD
@@ -202,6 +201,7 @@ En este caso se trata de Usuario y Password pero existen otras opciones.
  
 <!---End place for the badge -->
  
+<hr>
  
 <a name="item6"></a>
 ## DEPLOY VERCEL
@@ -254,14 +254,30 @@ Facilitamos a los equipos frontend el desarrollo, la vista previa y el envío de
  
 > URL: https://nodemailer.com/about/
  
+> Se encargara de enviar un correo.
 #### STAGE
 
-<!---Start place for the badge -->
+![Captura de pantalla de 2022-02-10 11-31-40](https://user-images.githubusercontent.com/62303274/153389063-b0793faa-bc3f-4a03-9ee9-e3d45a80dbf8.png)
 
-[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+```
+ npm install nodemailer => instala nodemailer.
+ withCredentials => Para enviar correo en este caso a traves de Gmail, tenemos que obtener un token del propio Gmail.
+                    Aqui se explica como: https://mailtrap.io/blog/nodemailer-gmail/
+                    Connfigurar una credencial como hemos visto anteriormente.
+node jenkinsScripts/Email.js => ejecuta el script de la ruta indicada.
+&RES_LINT, &RES_TEST, &RES_UPDATE, $RES_DEPLOY, $GTOKEN, "params.correo_notificacion son parametros de entrada del script.
  
+```
+ #### SCRIPT
  
+ ![Captura de pantalla de 2022-02-10 11-38-24](https://user-images.githubusercontent.com/62303274/153390102-6d24edbc-7c12-4f36-8aae-8494db9f8bdc.png)
 
-<!---End place for the badge -->
-
-
+ ```
+ El scripts requiere de "nodemailer".
+ Declaramos los parametros de entrada y los asignamos a variables.
+ Asignamos los valores o variables en los campos correspondientes.
+ En el apartado text o html, definimos el cuerpo del mensaje que queremos mostrar.
+ ```
+ Con la ejecucion del Stage y el correspondiente Script obtenemos un correo.
+ 
+ ![Captura de pantalla de 2022-02-10 11-38-24](https://user-images.githubusercontent.com/62303274/153390617-5128d98a-0032-4dc4-bc10-f3bc8ce08a99.png)
